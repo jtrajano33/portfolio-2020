@@ -1,0 +1,526 @@
+ *{
+	padding-top: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+	body{
+		background-color: darkgrey;
+	}
+
+	main{
+		width: 100%;
+		height: 100vh;
+		display: grid;
+		grid-template-columns: repeat(4,1fr);
+		grid-auto-rows: minmax(80px,auto);
+		grid-template-areas: 
+			". . . ."
+			". screen screen ."
+			". screen screen ."
+			". screen screen ."
+			". screen screen ."
+			". . . ."
+	}
+
+	main .screen{
+		background: url('../forest.PNG') no-repeat;
+		background-size: cover;
+		position: relative;
+		color:white;
+		grid-area: screen;
+		display: grid;
+		overflow: hidden;
+		grid-template-columns: 3fr 1fr 1fr;
+		grid-auto-rows: minmax(20px, auto);
+
+	}
+
+	.scene-1{
+		grid-template-areas:
+			". . ." 
+			"bugsy mern mern"
+			"bugsy mern mern"
+			"bugsy mern mern"
+			"bugsy mern mern"
+			"bugsy mern mern"
+			"bugsy mern mern"
+			"bugsy mern mern"
+			"dialog dialog dialog";
+	}
+
+	.scene-2{
+		grid-template-areas:
+			"bugsy bugsy bugsy"
+			"bugsy bugsy bugsy"
+			"bugsy bugsy bugsy"
+			"bugsy bugsy bugsy"
+			"bugsy bugsy bugsy"
+			"bugsy bugsy bugsy"
+			"bugsy bugsy bugsy"
+			"bugsy bugsy bugsy"
+			"dialog dialog dialog";
+	}
+
+	.test{
+		grid-area: test;
+	}
+
+
+	#loadingScreen{
+		z-index: 120;
+		position: absolute;
+		background-color: black;
+		width: 100%;
+		height: 100%;
+		display: grid;
+		overflow: hidden;
+		align-items: center;
+		justify-items: center;
+		grid-template-columns: 1fr 3fr 1fr;
+		grid-auto-rows: minmax(20px, auto);
+		grid-template-areas:
+			". . ." 
+			". loader ."
+			"loadingText loadingText loadingText"
+			". . ."
+			". . .";
+	}
+
+	.loadingText{
+		grid-area: loadingText;
+		font-weight: bolder;
+		font-size: 25px;
+		animation: loading 1s linear infinite;
+	}
+
+	.loader{
+		grid-area: loader;
+		border: 16px solid #f3f3f3;
+		border-top: 16px solid green;
+		border-radius: 50%;
+		width: 100px;
+		height: 100px;
+		animation: spin 2s linear infinite;
+	}
+
+	section{
+		width: 100%;
+		background-color: white;
+		color: black;
+		z-index: 10;
+		grid-area: dialog;
+		display: grid;
+	}
+
+	.bugsy{
+		grid-area: bugsy;
+		position: relative;
+	}
+
+
+	.mern{
+		grid-area: mern;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-auto-rows: minmax(75px, auto);
+		align-items: center;
+		justify-items: center;
+		grid-template-areas: 
+			"mongo express"
+			"react node";
+	}
+
+	.mern div{
+		width: 100%;
+		height: 100%;
+		display: grid;
+   	 	align-items: center;
+    	justify-items: center;
+	}
+
+	.mern div div{
+		background-color: white;
+		width: 75px;
+		height: 75px;
+		overflow: hidden;
+    	border-radius: 10%;
+	}
+
+	.bugsy div div div{
+		background-color: white;
+		width: 75px;
+		height: 75px;
+		overflow: hidden;
+    	border-radius: 10%;
+	}
+
+	.mongo-icon-image{
+		background: url('../icons/mongodb.PNG') no-repeat;
+		background-size: 65px;
+		background-position: center center;
+	}
+
+
+	.express-icon-image{
+		background: url('../icons/express.PNG') no-repeat;
+		background-size: 65px;
+		background-position: center center;
+	}
+
+	.react-icon-image{
+		background: url('../icons/react.PNG') no-repeat;
+		background-size: 65px;
+		background-position: center center;
+	}
+
+	.node-icon-image{
+		background: url('../icons/node.PNG') no-repeat;
+		background-size: 65px;
+		background-position: center center;
+	}
+
+	.html-icon-image{
+		background: url('../icons/html.PNG') no-repeat;
+		background-size: 65px;
+		background-position: center center;
+	}
+
+	.css-icon-image{
+		background: url('../icons/css.PNG') no-repeat;
+		background-size: 65px;
+		background-position: center center;
+	}
+
+	.javascript-icon-image{
+		background: url('../icons/javascript.PNG') no-repeat;
+		background-size: 78px;
+		background-position: center center;
+	}
+
+	.bootstrap-icon-image{
+		background: url('../icons/bootstrap.PNG') no-repeat;
+		background-size: 100px;
+		background-position: center center;
+	}
+
+	.jquery-icon-image{
+		background: url('../icons/jquery.PNG') no-repeat;
+		background-size: 65px;
+		background-position: center center;
+	}
+
+	.php-icon-image{
+		background: url('../icons/php.PNG') no-repeat;
+		background-size: 85px;
+		background-position: center center;
+	}
+
+	.mysql-icon-image{
+		background: url('../icons/sql.PNG') no-repeat;
+		background-size: 65px;
+		background-position: center center;
+	}
+
+	.laravel-icon-image{
+		background: url('../icons/laravel.PNG') no-repeat;
+		background-size: 82px;
+		background-position: center center;
+	}
+
+
+
+	.mongo-icon{
+		grid-area: mongo;
+	}
+
+	.express-icon{
+		grid-area: express;
+	}
+
+	.react-icon{
+		grid-area: react;
+	}
+
+	.node-icon{
+		grid-area: node;
+	}
+
+
+	.appear1{
+		opacity: 0;
+		animation: appear 1.5s;
+		animation-fill-mode: forwards;		
+	}
+
+	.appear2{
+		opacity: 0;
+		animation: appear 1.5s 1s;
+		animation-fill-mode: forwards;
+	}
+
+
+	.appear3{
+		opacity: 0;
+		animation: appear 1.5s 2s;
+		animation-fill-mode: forwards;
+	}
+
+	.appear4{
+		opacity: 0;
+		animation: appear 1.5s 3s;
+		animation-fill-mode: forwards;
+	}
+
+	.bugsy-container{
+		animation: blink 4s linear infinite;
+		width: 100%;
+		height: 100%;
+		background: url('../bugsy6.PNG') no-repeat;
+		background-size: contain;
+	}
+
+	.bugsy-container-bootcamp{
+		display: grid;
+		height: 100%;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: minmax(20px, auto);
+		justify-items: center;
+		align-items: center;
+		grid-template-areas: 
+			"html css javascript bootstrap"
+			"jquery laravel mysql php"
+	}
+
+	.html-icon{
+		grid-area: html;
+	}
+
+	.css-icon{
+		grid-area: css;
+	}
+
+	.javascript-icon{
+		grid-area: javascript;
+	}
+
+	.bootstrap-icon{
+		grid-area: bootstrap;
+	}
+
+	.jquery-icon{
+		grid-area: jquery;
+	}
+
+	.mysql-icon{
+		grid-area: mysql;
+	}
+
+	.php-icon{
+		grid-area: php;
+	}
+
+	.laravel-icon{
+		grid-area: laravel;
+	}
+
+	.name, .content{
+		padding: 7px;
+		text-align: justify;
+	}
+
+	.name{
+		border-bottom: 1px solid black;
+		align-self: center;
+		font-weight: bold;
+	}
+
+	.btn-container{
+		display: grid;
+		align-items: right;
+		grid-template-columns: repeat(5,1fr);
+		padding: 5px;
+	}
+
+	.btn-container2{
+		display: grid;
+		align-items: right;
+		grid-template-columns: repeat(5,1fr);
+		padding: 5px;
+	}
+
+	.btn-nextPage{
+		background:transparent;
+		text-align: right;
+		border-width: 0;
+		grid-column: 5/6;
+		position: relative;
+	}
+
+	.btn-nextPage2{
+		background:transparent;
+		text-align: right;
+		border-width: 0;
+		grid-column: 5/6;
+		position: relative;
+	}
+
+	.btn-nextPage:focus,
+	.btn-nextPage:visited,
+	.btn-nextPage:active,
+	.btn-nextPage{
+		border-color: transparent !important;
+		outline: 0 none !important;
+	}
+
+	.btn-nextPage2:focus,
+	.btn-nextPage2:visited,
+	.btn-nextPage2:active,
+	.btn-nextPage2{
+		border-color: transparent !important;
+		outline: 0 none !important;
+	}
+
+	.modal-content{
+		background-color: transparent;
+		border:none;
+		position: relative;
+		bottom: 5em;
+	}
+
+
+	.btn-success{
+		background: url('../forest.PNG');
+		font-weight: bold;
+		letter-spacing: 1px;
+		text-shadow: 1.5px 1.5px black;
+		border:none;
+	}
+
+	.btn-success:hover{
+		transform: scale(1.03);
+	}
+
+	@media only screen and (max-width: 913px) {
+	main{
+		grid-template-areas:
+			"screen screen screen screen" 
+			"screen screen screen screen"
+			"screen screen screen screen"
+			"screen screen screen screen"
+			"screen screen screen screen"
+			"screen screen screen screen"
+	}
+
+	.scene-1{
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-areas:
+		"mern mern mern"
+		"bugsy bugsy bugsy"
+		"bugsy bugsy bugsy"
+		"bugsy bugsy bugsy"
+		"bugsy bugsy bugsy"
+		"bugsy bugsy bugsy"
+		"bugsy bugsy bugsy"
+		"bugsy bugsy bugsy"
+		"dialog dialog dialog"
+	}
+
+	.mern{
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-auto-rows: minmax(75px, auto);
+		align-items: center;
+		justify-items: center;
+		grid-template-areas: 
+			"mongo express react node"
+	}
+
+
+	.bugsy-container-bootcamp{
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+		grid-template-areas: 
+			" . html . css ."
+			". javascript . bootstrap ."
+			". jquery . laravel ."
+			". mysql . php ."
+	}
+
+	}
+
+	@media only screen and (max-width: 361px) {
+		.btn-nextPage{
+			grid-column: 4/6;
+		}
+	}
+
+
+
+	/*animations*/
+
+
+	@keyframes blink{
+	0%{
+		 width: 100%
+		height: 100%;
+		background: url('../bugsy7.PNG') no-repeat;
+		background-size: contain;
+		background-position: bottom center;
+	}
+	2%{
+		width: 100%
+		height: 100%;
+		background: url('../bugsy8.PNG') no-repeat;
+		background-size: contain;
+		background-position:bottom center;
+	}
+
+	99.5%{
+		width: 100%
+		height: 100%;
+		background: url('../bugsy8.PNG') no-repeat;
+		background-size: contain;
+		background-position:bottom center;
+	}
+	100%{
+		width: 100%
+		height: 100%;
+		background: url('../bugsy7.PNG') no-repeat;
+		background-size: contain;
+		background-position:bottom center;
+	}
+
+	}
+
+
+	
+@keyframes loading{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+
+@keyframes spin{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes appear{
+	0%{
+		opacity: 0;
+	}
+	80%{
+		opacity: 1;
+		transform: scale(1.05);
+	}
+	100%{
+		opacity: 1;
+		transform: scale(1);
+	}
+}

@@ -1,0 +1,174 @@
+*{
+	padding-top: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: 'JustinFont';
+	src: url('../fonts/LifeCraft_Font.ttf') format('truetype')
+}
+
+body{
+	background-color: darkgrey;
+}
+
+.titleStyle{
+    width: 100%;
+    height: 100px;
+    background: url(../title.PNG) no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+main{
+	width: 100%;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	grid-auto-rows: minmax(80px,auto);
+	grid-template-areas: 
+		". . . ."
+		". screen screen ."
+		". screen screen ."
+		". screen screen ."
+		". screen screen ."
+		". . . ."
+}
+
+main .screen{
+	background: url('../forest.PNG') no-repeat;
+	position: relative;
+	background-size: cover;
+	color:white;
+	grid-area: screen;
+	display: grid;
+	overflow: hidden;
+	grid-template-columns: 1fr 3fr 1fr;
+	grid-auto-rows: minmax(20px, auto);
+	grid-template-areas:
+		". . ."
+		". . ." 
+		"gameTitle gameTitle gameTitle"
+		". . ."
+		". startButton ."
+		". creditsButton ."
+		". . .";
+}
+
+.version{
+	color: white;
+	text-shadow: 1px 1px black;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin-right: 5px;
+	font-family: 'JustinFont';
+	letter-spacing: 2px;
+    font-size: 15px;
+}
+
+.gameTitle{
+	grid-area: gameTitle;
+    font-family: 'JustinFont';
+    padding: 0px 50px;
+    font-size: 53px;
+    letter-spacing: 4px !important;
+    font-weight: bold;
+    animation: appearing 3s;
+    animation-fill-mode: forwards;
+    display: grid;
+    align-items: center;
+    text-shadow: 2px 2px darkgreen;
+    color: honeydew;
+}
+
+.btn{
+	background: repeating-linear-gradient(yellowgreen, darkgreen 84px);
+}
+
+.btn:hover{
+	background: repeating-linear-gradient(yellowgreen, yellow 120px);
+	color: darkgreen;
+}
+
+.startButton{
+	font-family: 'JustinFont';
+	opacity: 0;
+	grid-area: startButton;
+	animation: appearing 3s 1s,
+				buttonBlinking 0.7s 4s infinite;
+}
+
+
+.startButton a button, .creditsButton button{
+	letter-spacing: 10px;
+	font-size: 1.5em;
+	color: honeydew;
+}
+
+.creditsButton{
+	font-family: 'JustinFont';
+	opacity: 0;
+	grid-area: creditsButton;
+	animation: appearing 3s 2s;
+	animation-fill-mode: forwards;
+}
+
+
+
+@media only screen and (max-width: 913px) {
+	main{
+		grid-template-areas:
+			"screen screen screen screen" 
+			"screen screen screen screen"
+			"screen screen screen screen"
+			"screen screen screen screen"
+			"screen screen screen screen"
+			"screen screen screen screen"
+	}
+}
+
+
+@media only screen and (max-width: 768px) {
+	main .screen{
+		grid-template-areas:
+			". . ."
+			". . ." 
+			"gameTitle gameTitle gameTitle"
+			". . ."
+			"startButton startButton startButton"
+			"creditsButton creditsButton creditsButton"
+			". . .";
+	}
+
+	.startButton, .creditsButton, .gameTitle{
+		margin: 0px 25px;
+	}
+
+	.gameTitle{
+		padding: 0px;
+	}
+}
+
+@keyframes appearing{
+	from{
+		opacity: 0;
+	}
+
+	to{
+		opacity: 1;
+	}
+}
+
+@keyframes buttonBlinking{
+	0%{
+		transform: scale(1);
+		opacity: 1;
+	}
+
+	100%{
+		transform: scale(1.02);
+		opacity: 1;
+	}
+}

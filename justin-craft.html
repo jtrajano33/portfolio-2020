@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head> 
+	<title></title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, shrink-to-fit=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+		<!-- bootstrap css -->
+		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+		<link rel="stylesheet" type="text/css" href="assets/css/bugsy.css">
+
+		<link rel="preload" type="image/PNG" as="image" href="./assets/bugsy1.PNG">
+		<link rel="preload" type="image/PNG" as="image" href="./assets/bugsy2.PNG">
+		<link rel="preload" type="image/PNG" as="image" href="./assets/bugsy3.PNG">
+		<link rel="preload" type="image/PNG" as="image" href="./assets/bugsy5.PNG">
+		<link rel="preload" type="image/PNG" as="image" href="./assets/bugsy6.PNG">
+		<link rel="preload" type="image/PNG" as="image" href="./assets/forest.PNG"> 
+</head>
+
+<body>
+	<main>
+		<div class="screen">
+			<div class="bugsy">
+				<div class="bugsy-container"></div>	
+			</div>
+			<section>
+				<div class="name py-1">Bugsy</div>
+				<div class="content py-1">Tadaaa!! Hi there! Thanks for visiting. My name is Bugsy. I was created by <strong>Justin Trajano</strong> to assist you. What do you want to know about my Creator? Click "Next" below to continue</div>
+				<div class="btn-container py-0">
+					<button class="btn-nextPage py-0" type="button" data-toggle="modal" data-target="#toolsUsed">Next >></button>
+				</div>
+			</section>
+
+			<div id="loadingScreen">
+				<div class="loader"></div>
+				<div class="loadingText text-center">Loading... Please Wait...</div>
+			</div>
+		</div>
+
+		<!-- Modal -->
+		<div class="modal fade" id="toolsUsed" tabindex="-1" role="dialog" aria-labelledby="toolsUsedLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-dialog-centered" role="document">
+		    <div class="modal-content">
+		      <div class="modal-body">
+		      		<a href="./programming-skills.html" style="text-decoration: none;">
+		      			<button class="btn btn-success btn-block my-3 py-3">About his Programming Skills</button>
+		      		</a>
+		      		<a href="./arts.html" style="text-decoration: none;">
+		      			<button class="btn btn-success btn-block my-3 py-3">About his Digital Illustrations</button>
+		      		</a>
+		      		<a href="./contact.html" style="text-decoration: none;">
+		      			<button class="btn btn-success btn-block my-3 py-3">I need his contact information</button>
+		      		</a>
+		      </div>
+		    </div>
+		  </div>
+		</div>	
+	</main>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+    <!-- external bootstrap js -->
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+    	window.addEventListener("load", ()=>{
+    		const loading = document.getElementById("loadingScreen");
+    		setTimeout(()=>{
+    			loading.style.display="none";
+
+    		},1000);
+    		
+    	})
+    </script>
+
+</body>
+</html>

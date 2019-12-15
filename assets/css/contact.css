@@ -1,0 +1,361 @@
+*{
+	padding-top: 0;
+	margin: 0;
+	box-sizing: border-box; 
+}
+
+	body{
+		background-color: darkgrey;
+	}
+
+	main{
+		width: 100%;
+		height: 100vh;
+		display: grid;
+		grid-template-columns: repeat(4,1fr);
+		grid-auto-rows: minmax(80px,auto);
+		grid-template-areas: 
+			". . . ."
+			". screen screen ."
+			". screen screen ."
+			". screen screen ."
+			". screen screen ."
+			". . . ."
+	}
+
+	main .screen{
+		background: url('../forest.PNG') no-repeat;
+		background-size: cover;
+		position: relative;
+		color:white;
+		grid-area: screen;
+		display: grid;
+		overflow: hidden;
+		grid-template-columns: 1fr 3fr 1fr;
+		grid-auto-rows: minmax(20px, auto);
+		grid-template-areas:
+			". . ." 
+			"bugsy bugsy bugsy"
+			"bugsy bugsy bugsy"
+			"bugsy bugsy bugsy"
+			"bugsy bugsy bugsy"
+			"bugsy bugsy bugsy"
+			"bugsy bugsy bugsy"
+			"bugsy bugsy bugsy"
+			"dialog dialog dialog"
+
+	}
+
+	#loadingScreen{
+		z-index: 120;
+		position: absolute;
+		background-color: black;
+		width: 100%;
+		height: 100%;
+		display: grid;
+		overflow: hidden;
+		align-items: center;
+		justify-items: center;
+		grid-template-columns: 1fr 3fr 1fr;
+		grid-auto-rows: minmax(20px, auto);
+		grid-template-areas:
+			". . ." 
+			". loader ."
+			"loadingText loadingText loadingText"
+			". . ."
+			". . .";
+	}
+
+	.loadingText{
+		grid-area: loadingText;
+		font-weight: bolder;
+		font-size: 25px;
+		animation: loading 1s linear infinite;
+	}
+
+	.loader{
+		grid-area: loader;
+		border: 16px solid #f3f3f3;
+		border-top: 16px solid green;
+		border-radius: 50%;
+		width: 100px;
+		height: 100px;
+		animation: spin 2s linear infinite;
+	}
+
+	section{
+		width: 100%;
+		background-color: white;
+		color: black;
+		z-index: 10;
+		grid-area: dialog;
+		display: grid;
+	}
+
+	.bugsy{
+		grid-area: bugsy;
+		position: relative;
+	}
+
+	.bugsy-container{
+		width: 100%;
+		height: 100%;
+		background: url('../bugsy10.PNG') no-repeat;
+		background-size: contain;
+		background-position: bottom center;
+	}
+
+	.name, .content{
+		padding: 7px;
+		text-align: justify;
+	}
+
+	.name{
+		border-bottom: 1px solid black;
+		align-self: center;
+		font-weight: bold;
+	}
+
+	.btn-container{
+		display: grid;
+		align-items: right;
+		grid-template-columns: repeat(5,1fr);
+		padding: 5px;
+	}
+
+	.btn-nextPage{
+		background:transparent;
+		text-align: right;
+		border-width: 0;
+		grid-column: 5/6;
+	}
+
+	.btn-nextPage:focus,
+	.btn-nextPage:visited,
+	.btn-nextPage:active,
+	.btn-nextPage{
+		border-color: transparent !important;
+		outline: 0 none !important;
+	}
+
+	.modal-content{
+		background-color: transparent;
+		border:none;
+		position: relative;
+		bottom: 5em;
+	}
+
+
+	.btn-success{
+		background: url('../forest.PNG');
+		font-weight: bold;
+		letter-spacing: 1px;
+		text-shadow: 1.5px 1.5px black;
+		border:none;
+	}
+
+	.btn-success:hover{
+		transform: scale(1.03);
+	}
+
+	@media only screen and (max-width: 913px) {
+	main{
+		grid-template-areas:
+			"screen screen screen screen" 
+			"screen screen screen screen"
+			"screen screen screen screen"
+			"screen screen screen screen"
+			"screen screen screen screen"
+			"screen screen screen screen"
+	}
+
+	main .screen{
+		grid-template-areas:
+		". . ."
+		". . ."  
+		". . ." 
+		". . ." 
+		"bugsy bugsy bugsy"
+		"bugsy bugsy bugsy"
+		"bugsy bugsy bugsy"
+		"bugsy bugsy bugsy"
+		"bugsy bugsy bugsy"
+		"bugsy bugsy bugsy"
+		"bugsy bugsy bugsy"
+		"bugsy bugsy bugsy"
+		"dialog dialog dialog"
+	}
+	}
+
+	@media only screen and (max-width: 361px) {
+	.btn-nextPage{
+		grid-column: 4/6;
+	}
+	}
+
+	@keyframes talking{
+	0%{
+	 width: 100%;
+	height: 100%;
+	background: url('../bugsy1.PNG') url('../bugsy1.PNG') no-repeat;
+	background-size: contain;
+	background-position:bottom center;
+	}
+	10%{
+	 width: 100%;
+	height: 100%;
+	background: url('../bugsy2.PNG') no-repeat;
+	background-size: contain;	
+	background-position:bottom center;
+	}
+	20%{
+	 width: 100%;
+	height: 100%;
+	background: url('../bugsy2.PNG') no-repeat;
+	background-size: contain;
+	background-position:bottom center;	
+	}
+	30%{
+	 width: 100%;
+	height: 100%;
+	background: url('../bugsy1.PNG') no-repeat;
+	background-size: contain;
+	background-position:bottom center;
+	}
+	40%{
+	 width: 100%;
+	height: 100%;
+	background: url('../bugsy2.PNG') no-repeat;
+	background-size: contain;
+	background-position:bottom center;
+	}
+	50%{
+	 width: 100%;
+	height: 100%;
+	background: url('../bugsy2.PNG') no-repeat;
+	background-size: contain;
+	background-position:bottom center;
+	}
+	60%{
+	 width: 100%;
+	height: 100%;
+	background: url('../bugsy1.PNG') no-repeat;
+	background-size: contain;
+	background-position:bottom center;
+	}
+	70%{
+	 width: 100%;
+	height: 100%;
+	background: url('../bugsy2.PNG') no-repeat;
+	background-size: contain;
+	background-position:bottom center;
+	}
+	80%{
+	 width: 100%;
+	height: 100%;
+	background: url('../bugsy2.PNG') no-repeat;
+	background-size: contain;
+	background-position:bottom center;
+	}
+	90%{
+	 width: 100%;
+	height: 100%;
+	background: url('../bugsy6.PNG') no-repeat;
+	background-size: contain;
+	background-position:bottom center;
+	}
+	100%{
+	 width: 100%
+	height: 100%;
+	background: url('../bugsy6.PNG') no-repeat;
+	background-size: contain;
+	background-position:bottom center;
+	}
+	}
+
+	@keyframes blink{
+	0%{
+		 width: 100%
+		height: 100%;
+		background: url('../bugsy5.PNG') no-repeat;
+		background-size: contain;
+		background-position: bottom center;
+	}
+	2%{
+		width: 100%
+		height: 100%;
+		background: url('../bugsy6.PNG') no-repeat;
+		background-size: contain;
+		background-position:bottom center;
+	}
+
+	99.5%{
+		width: 100%
+		height: 100%;
+		background: url('../bugsy6.PNG') no-repeat;
+		background-size: contain;
+		background-position:bottom center;
+	}
+	100%{
+		width: 100%
+		height: 100%;
+		background: url('../bugsy5.PNG') no-repeat;
+		background-size: contain;
+		background-position:bottom center;
+	}
+
+	}
+
+
+	@keyframes smirk{
+	0%{
+		 width: 100%
+		height: 100%;
+		background: url('../bugsy6.PNG') no-repeat;
+		background-size: contain;
+		background-position:bottom center;
+	}
+
+	5%{
+		width: 100%
+		height: 100%;
+		background: url('../bugsy3.PNG') no-repeat;
+		background-size: contain;
+		background-position:bottom center;
+	}
+
+	99.5%{
+		width: 100%
+		height: 100%;
+		background: url('../bugsy3.PNG') no-repeat;
+		background-size: contain;
+		background-position:bottom center;
+	}
+	100%{
+		width: 100%
+		height: 100%;
+		background: url('../bugsy6.PNG') no-repeat;
+		background-size: contain;
+		background-position:bottom center;
+	}
+
+	}
+
+
+@keyframes loading{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+
+@keyframes spin{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}

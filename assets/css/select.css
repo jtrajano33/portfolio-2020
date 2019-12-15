@@ -1,0 +1,235 @@
+*{
+	padding-top: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background-color: darkgrey;
+}
+
+main{
+	width: 100%;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	grid-auto-rows: minmax(80px,auto);
+	grid-template-areas: 
+		". . . ."
+		". screen screen ."
+		". screen screen ."
+		". screen screen ."
+		". screen screen ."
+		". . . ."
+}
+
+main .screen{
+	background: black;
+	color: white;
+	position: relative;
+	background-size: cover;
+	align-items: center;
+	justify-items: center;
+	color:white;
+	grid-area: screen;
+	display: grid;
+	overflow: hidden;
+	grid-template-columns: 1fr 6fr 6fr 1fr;
+	grid-auto-rows: minmax(20px, auto);
+	grid-template-areas:
+		". selectTitle selectTitle ."
+		". selectBugsy selectSoon ."
+		". selectBugsy selectSoon ."
+		". selectBugsy selectSoon ."
+		". selectBugsy selectSoon ."
+		". selectBugsy selectSoon ."
+		". selectBugsy selectSoon ."
+		". . . .";
+}
+
+.selectTitle{
+	grid-area: selectTitle;
+	font-weight: bolder;
+	font-size: 25px;
+}
+
+.selectBugsy{
+	grid-area: selectBugsy
+}
+
+.selectSoon{
+	grid-area: selectSoon
+}
+
+
+.selectButton{
+	width: 100%;
+	height: 100%;
+	display: grid;
+	justify-items:center;
+	align-items: center;
+}
+
+.selectAssistant{
+	height: 100%;
+	width: 85%;
+}
+
+.selectAssistant:hover{
+	transform: scale(1.02);
+}
+
+.selectBugsyContent::after{
+	content: '';
+	z-index: 2000;
+	display: block;
+	position: flex;
+	width: 100%;
+	height: 100%;
+	background: black;
+	opacity: 0.4;
+}
+
+.selectBugsyContent:hover::after{
+	opacity: 0;
+}
+
+.selectBugsyContent{
+	background: url('../bugsy5.PNG') no-repeat;
+	background-size: cover;
+    background-position:center center;
+    border: 10px solid palevioletred;
+    z-index: 100;
+}
+
+.selectBugsyContent:hover, .selectBugsyContent:focus {
+	background: url('../bugsy2.PNG') no-repeat;
+	background-size: cover;
+    background-position: center center;
+    border: 10px solid mediumvioletred;
+}
+
+.selectSoonContent{
+	background: grey;
+	border: 10px solid darkgrey;
+	position: relative;
+	overflow: hidden;
+}
+
+.soonImage{
+	width: 100%;
+	height: 100%;
+	background: url('../unlock.PNG') no-repeat;
+	background-size: cover;
+    background-position:center center;
+    position: absolute;
+    top:5px;
+    transform: scale(1.06);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+	grid-auto-rows: minmax(20px, auto);
+	align-items: center;
+	grid-template-areas: 
+		". . ."
+		". imageText ."
+		". . ."
+}
+
+.imageText{
+    font-weight: bold;
+    text-shadow: -5px 1px black;
+    color: grey;
+    font-size: 2em;
+    grid-area: imageText;
+}
+
+
+#loadingScreen{
+	z-index: 120;
+	position: absolute;
+	background-color: black;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	overflow: hidden;
+	align-items: center;
+	justify-items: center;
+	grid-template-columns: 1fr 3fr 1fr;
+	grid-auto-rows: minmax(20px, auto);
+	grid-template-areas:
+		". . ." 
+		". loader ."
+		"loadingText loadingText loadingText"
+		". . ."
+		". . .";
+}
+
+.loadingText{
+	grid-area: loadingText;
+	font-weight: bolder;
+	font-size: 25px;
+	animation: loading 1s linear infinite;
+}
+
+.loader{
+	grid-area: loader;
+	border: 16px solid #f3f3f3;
+	border-top: 16px solid green;
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	animation: spin 2s linear infinite;
+}
+
+@media only screen and (max-width: 913px) {
+	main{
+		grid-template-areas:
+			"screen screen screen screen" 
+			"screen screen screen screen"
+			"screen screen screen screen"
+			"screen screen screen screen"
+			"screen screen screen screen"
+			"screen screen screen screen"
+	}
+}
+
+
+@media only screen and (max-width: 768px) {
+	main .screen{
+		grid-template-areas:
+			". selectTitle selectTitle ."
+			". selectTitle selectTitle ."
+			". selectBugsy selectBugsy ."
+			". selectBugsy selectBugsy ."
+			". selectBugsy selectBugsy ."
+			". selectBugsy selectBugsy ."
+			". selectBugsy selectBugsy ."
+			". . . ."
+			". selectSoon selectSoon ."
+			". selectSoon selectSoon ."
+			". selectSoon selectSoon ."
+			". selectSoon selectSoon ."
+			". selectSoon selectSoon ."
+			". . . .";
+	}
+
+}
+
+
+@keyframes loading{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+
+@keyframes spin{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
