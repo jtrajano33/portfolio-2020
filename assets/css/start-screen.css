@@ -16,7 +16,7 @@ body{
 .titleStyle{
     width: 100%;
     height: 100px;
-    background: url(../title.PNG) no-repeat;
+    background: url(../title.png) no-repeat;
     background-position: center center;
     background-size: contain;
 }
@@ -37,7 +37,7 @@ main{
 }
 
 main .screen{
-	background: url('../forest.PNG') no-repeat;
+	background: url('../forest.png') no-repeat;
 	position: relative;
 	background-size: cover;
 	color:white;

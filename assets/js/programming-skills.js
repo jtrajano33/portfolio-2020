@@ -39,7 +39,7 @@ const changePage = () => {
 	if(pageCounter == 2){
 
 		$('.bugsy-container').css({
-                    background: 'url("./assets/bugsy9.PNG") no-repeat', 
+                    background: 'url("./assets/bugsy9.png") no-repeat', 
                     animation: "none",
                     backgroundSize: "contain",
                     backgroundPosition: "bottom center",
@@ -59,14 +59,14 @@ const changePage = () => {
 	}
 
 	if(pageCounter == 4){
-		$('.html-icon-image').css({backgroundImage: 'url("./assets/icons/firebase.PNG")'})
-		$('.css-icon-image').css({backgroundImage: 'url("./assets/icons/lambda.PNG")'})
-		$('.javascript-icon-image').css({backgroundImage: 'url("./assets/icons/sass.PNG")'})
-		$('.bootstrap-icon-image').css({backgroundImage: 'url("./assets/icons/bulma.PNG")', backgroundSize: "65px"})
-		$('.jquery-icon-image').css({backgroundImage: 'url("./assets/icons/heroku.PNG")'})
-		$('.laravel-icon-image').css({backgroundImage: 'url("./assets/icons/github.PNG")', backgroundSize: '97px'})
-		$('.mysql-icon-image').css({backgroundImage: 'url("./assets/icons/graphql.PNG")'})
-		$('.php-icon-image').css({backgroundImage: 'url("./assets/icons/unity.PNG")', backgroundSize: "65px"})
+		$('.html-icon-image').css({backgroundImage: 'url("./assets/icons/firebase.png")'})
+		$('.css-icon-image').css({backgroundImage: 'url("./assets/icons/lambda.png")'})
+		$('.javascript-icon-image').css({backgroundImage: 'url("./assets/icons/sass.png")'})
+		$('.bootstrap-icon-image').css({backgroundImage: 'url("./assets/icons/bulma.png")', backgroundSize: "65px"})
+		$('.jquery-icon-image').css({backgroundImage: 'url("./assets/icons/heroku.png")'})
+		$('.laravel-icon-image').css({backgroundImage: 'url("./assets/icons/github.png")', backgroundSize: '97px'})
+		$('.mysql-icon-image').css({backgroundImage: 'url("./assets/icons/graphql.png")'})
+		$('.php-icon-image').css({backgroundImage: 'url("./assets/icons/unity.png")', backgroundSize: "65px"})
 
 		content.innerHTML = "Along the way, he learned other programming language and web technologies like <strong>Firebase, AWS Lambda, SASS, Bulma, Heroku and many more</strong>. He use <strong>Github</strong> for version control."
 	}

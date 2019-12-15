@@ -30,7 +30,7 @@ const changePage = () => {
 		screenPage.classList.add('scene-2');
 		$('.inkscape-icon, .autocad-icon, .sai-icon').css({ opacity: 0 });
 		$('.tools-icons').css({
-			backgroundImage: "url('./assets/saya.JPG')", 
+			backgroundImage: "url('./assets/saya.jpg')", 
 			backgroundSize: "contain",
 			backgroundRepeat: "no-repeat",
 			backgroundPosition: "center center",

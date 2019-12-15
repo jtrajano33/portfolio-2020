@@ -17,7 +17,7 @@ const changeToJapanese = () => {
 	$('#modal').modal().hide();
 
 	$('.bugsy-container').css({
-		background: "url('./assets/bugsy13.PNG')",
+		background: "url('./assets/bugsy13.png')",
 		backgroundRepeat: "no-repeat",
 		backgroundSize: "contain",
 		backgroundPosition: 'bottom center',
@@ -25,14 +25,14 @@ const changeToJapanese = () => {
 	})
 
 	$('.screen').css({
-		background: "url('./assets/sakura2.PNG')",
+		background: "url('./assets/sakura2.png')",
 		backgroundPosition: '40% 0%',
 		backgroundSize: "cover",
 		backgroundRepeat: 'no-repeat'
 	})
 
 	$('.modal-body button').css({
-		background: "url('./assets/sakura2.PNG')",
+		background: "url('./assets/sakura2.png')",
 		backgroundSize: "cover",
 		backgroundRepeat: "no-repeat",
 		border: '1px solid white',
@@ -44,7 +44,7 @@ const changeToJapanese = () => {
 
 	setTimeout(()=>{
 		$('.bugsy-container').css({
-			background: "url('./assets/bugsy12.PNG')",
+			background: "url('./assets/bugsy12.png')",
 			backgroundRepeat: "no-repeat",
 			backgroundSize: "contain",
 			backgroundPosition: 'bottom center',
@@ -54,7 +54,7 @@ const changeToJapanese = () => {
 
 	setInterval(()=>{
 		$('.bugsy-container').css({
-			background: "url('./assets/bugsy14.PNG')",
+			background: "url('./assets/bugsy14.png')",
 			backgroundRepeat: "no-repeat",
 			backgroundSize: "contain",
 			backgroundPosition: 'bottom center',
@@ -63,7 +63,7 @@ const changeToJapanese = () => {
 
 		setTimeout(()=>{
     		$('.bugsy-container').css({
-    			background: "url('./assets/bugsy12.PNG')",
+    			background: "url('./assets/bugsy12.png')",
     			backgroundRepeat: "no-repeat",
     			backgroundSize: "contain",
     			backgroundPosition: 'bottom center',
@@ -101,7 +101,7 @@ const changeSample = () => {
 
 	else if(sampleCounter == 3){
 		$("#sampleWebsite button").html("How about games?")
-		sampleWebsite.href = "https://jtrajano33.github.io/schuitt/";
+		sampleWebsite.href = "https://flip-flash.herokuapp.com";
 	}
 
 	else if (sampleCounter == 4){

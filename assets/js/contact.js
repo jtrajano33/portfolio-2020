@@ -8,7 +8,7 @@ window.addEventListener("load", ()=>{
 
 	setTimeout(()=>{
 		$('.bugsy-container').css({
-			background: 'url("./assets/bugsy11.PNG")',
+			background: 'url("./assets/bugsy11.png")',
 			backgroundRepeat: 'no-repeat',
 			backgroundSize: 'contain',
 			backgroundPosition:'bottom center'

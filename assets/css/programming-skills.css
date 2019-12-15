@@ -24,7 +24,7 @@
 	}
 
 	main .screen{
-		background: url('../forest.PNG') no-repeat;
+		background: url('../forest.png') no-repeat;
 		background-size: cover;
 		position: relative;
 		color:white;
@@ -156,74 +156,74 @@
 	}
 
 	.mongo-icon-image{
-		background: url('../icons/mongodb.PNG') no-repeat;
+		background: url('../icons/mongodb.png') no-repeat;
 		background-size: 65px;
 		background-position: center center;
 	}
 
 
 	.express-icon-image{
-		background: url('../icons/express.PNG') no-repeat;
+		background: url('../icons/express.png') no-repeat;
 		background-size: 65px;
 		background-position: center center;
 	}
 
 	.react-icon-image{
-		background: url('../icons/react.PNG') no-repeat;
+		background: url('../icons/react.png') no-repeat;
 		background-size: 65px;
 		background-position: center center;
 	}
 
 	.node-icon-image{
-		background: url('../icons/node.PNG') no-repeat;
+		background: url('../icons/node.png') no-repeat;
 		background-size: 65px;
 		background-position: center center;
 	}
 
 	.html-icon-image{
-		background: url('../icons/html.PNG') no-repeat;
+		background: url('../icons/html.png') no-repeat;
 		background-size: 65px;
 		background-position: center center;
 	}
 
 	.css-icon-image{
-		background: url('../icons/css.PNG') no-repeat;
+		background: url('../icons/css.png') no-repeat;
 		background-size: 65px;
 		background-position: center center;
 	}
 
 	.javascript-icon-image{
-		background: url('../icons/javascript.PNG') no-repeat;
+		background: url('../icons/javascript.png') no-repeat;
 		background-size: 78px;
 		background-position: center center;
 	}
 
 	.bootstrap-icon-image{
-		background: url('../icons/bootstrap.PNG') no-repeat;
+		background: url('../icons/bootstrap.png') no-repeat;
 		background-size: 100px;
 		background-position: center center;
 	}
 
 	.jquery-icon-image{
-		background: url('../icons/jquery.PNG') no-repeat;
+		background: url('../icons/jquery.png') no-repeat;
 		background-size: 65px;
 		background-position: center center;
 	}
 
 	.php-icon-image{
-		background: url('../icons/php.PNG') no-repeat;
+		background: url('../icons/php.png') no-repeat;
 		background-size: 85px;
 		background-position: center center;
 	}
 
 	.mysql-icon-image{
-		background: url('../icons/sql.PNG') no-repeat;
+		background: url('../icons/sql.png') no-repeat;
 		background-size: 65px;
 		background-position: center center;
 	}
 
 	.laravel-icon-image{
-		background: url('../icons/laravel.PNG') no-repeat;
+		background: url('../icons/laravel.png') no-repeat;
 		background-size: 82px;
 		background-position: center center;
 	}
@@ -276,7 +276,7 @@
 		animation: blink 4s linear infinite;
 		width: 100%;
 		height: 100%;
-		background: url('../bugsy6.PNG') no-repeat;
+		background: url('../bugsy6.png') no-repeat;
 		background-size: contain;
 	}
 
@@ -390,7 +390,7 @@
 
 
 	.btn-success{
-		background: url('../forest.PNG');
+		background: url('../forest.png');
 		font-weight: bold;
 		letter-spacing: 1px;
 		text-shadow: 1.5px 1.5px black;
@@ -462,14 +462,14 @@
 	0%{
 		 width: 100%
 		height: 100%;
-		background: url('../bugsy7.PNG') no-repeat;
+		background: url('../bugsy7.png') no-repeat;
 		background-size: contain;
 		background-position: bottom center;
 	}
 	2%{
 		width: 100%
 		height: 100%;
-		background: url('../bugsy8.PNG') no-repeat;
+		background: url('../bugsy8.png') no-repeat;
 		background-size: contain;
 		background-position:bottom center;
 	}
@@ -477,14 +477,14 @@
 	99.5%{
 		width: 100%
 		height: 100%;
-		background: url('../bugsy8.PNG') no-repeat;
+		background: url('../bugsy8.png') no-repeat;
 		background-size: contain;
 		background-position:bottom center;
 	}
 	100%{
 		width: 100%
 		height: 100%;
-		background: url('../bugsy7.PNG') no-repeat;
+		background: url('../bugsy7.png') no-repeat;
 		background-size: contain;
 		background-position:bottom center;
 	}
