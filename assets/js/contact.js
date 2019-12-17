@@ -4,7 +4,7 @@ window.addEventListener("load", ()=>{
 	setTimeout(()=>{
 		loading.style.display="none";
 
-	},1000);
+	},2000);
 
 	setTimeout(()=>{
 		$('.bugsy-container').css({
@@ -13,7 +13,7 @@ window.addEventListener("load", ()=>{
 			backgroundSize: 'contain',
 			backgroundPosition:'bottom center'
 		})
-	},2500)
+	},3500)
 	
 })
 

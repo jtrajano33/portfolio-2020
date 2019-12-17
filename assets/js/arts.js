@@ -4,18 +4,28 @@ const inkscape = document.querySelector('.image-container-1');
 const autocad = document.querySelector('.image-container-2');
 const sai = document.querySelector('.image-container-3');
 const bugsy = document.querySelector('.bugsy');
-
+ 
 window.addEventListener("load", ()=>{
 	const loading = document.getElementById("loadingScreen");
 	setTimeout(()=>{
 		loading.style.display="none";
 
 		screenPage.classList.add('scene-1');
+		inkscape.style.display="none";
+		autocad.style.display="none";
+		sai.style.display="none";
+
+	},2000);
+
+	setTimeout(()=>{
+		inkscape.style.display="block";
+		autocad.style.display="grid";
+		sai.style.display="block";
+
 		inkscape.classList.add('appear1');
 		autocad.classList.add('appear2');
 		sai.classList.add('appear3');
-
-	},1000);
+	},2500)
 	
 })
 

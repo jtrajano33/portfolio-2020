@@ -91,7 +91,8 @@ main .screen{
 }
 
 .selectBugsyContent:hover::after{
-	opacity: 0;
+	/*opacity: 0;*/
+	display: none;
 }
 
 .selectBugsyContent{
@@ -100,9 +101,12 @@ main .screen{
     background-position:center center;
     border: 10px solid palevioletred;
     z-index: 100;
-}
+} 
 
-.selectBugsyContent:hover, .selectBugsyContent:focus {
+.selectBugsyContent:hover,
+.selectBugsyContent:focus,
+.selectBugsyContent:visited,
+.selectBugsyContent:active{
 	background: url('../bugsy2.png') no-repeat;
 	background-size: cover;
     background-position: center center;

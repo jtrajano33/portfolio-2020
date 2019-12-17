@@ -68,6 +68,54 @@ main .screen{
     font-size: 15px;
 }
 
+
+	#creditScreen{
+		z-index: 120;
+		position: absolute;
+		background-color: black;
+		width: 100%;
+		height: 100%;
+		display: none;
+		overflow: hidden;
+		align-items: center;
+		justify-items: center;
+		grid-template-columns: 1fr 3fr 1fr;
+		grid-auto-rows: minmax(20px, auto);
+		grid-template-areas:
+			". credit ."
+			"creditsText creditsText creditsText"
+			"creditsText creditsText creditsText"
+			"returnPortal returnPortal returnPortal";
+	}
+
+	.creditsText{
+		grid-area: creditsText;
+		align-self: start;
+	}
+
+	.returnPortal{
+		grid-area: returnPortal;
+		letter-spacing: 3px;
+    	font-size: 19px;
+	}
+
+	.returnPortal div{
+		text-decoration: none;
+		color: white;
+		animation: buttonBlinking 0.7s infinite;
+	}
+
+	.creditsText .mb-5{
+		letter-spacing: 1px;
+	}
+
+	.creditsTitle{
+		grid-area: credit;
+		font-size: 35px;
+		font-family: 'JustinFont';
+		letter-spacing: 8px;
+	}
+
 .gameTitle{
 	grid-area: gameTitle;
     font-family: 'JustinFont';

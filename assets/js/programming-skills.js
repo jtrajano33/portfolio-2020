@@ -11,13 +11,25 @@ window.addEventListener("load", ()=>{
 	setTimeout(()=>{
 		loading.style.display="none";
 		bootcampIcons.style.opacity = 0;
-
 		screenPage.classList.add('scene-1');
+
+		mongo.style.display="none";
+		express.style.display="none";
+		react.style.display="none";
+		node.style.display="none";
+	},2000);
+
+	setTimeout(()=>{
+		mongo.style.display="block";
+		express.style.display="block";
+		react.style.display="block";
+		node.style.display="block";
+
 		mongo.classList.add('appear1');
 		express.classList.add('appear2');
 		react.classList.add('appear3');
 		node.classList.add('appear4');
-	},1000);
+	},2500)
 	
 })
 
