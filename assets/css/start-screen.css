@@ -156,6 +156,7 @@ main .screen{
 	color: honeydew;
 	border-radius: 15px;
     text-shadow: 1px 2px green;
+	border: 1px solid green;
 }
 
 .creditsButton{
