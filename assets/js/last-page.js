@@ -96,20 +96,32 @@ const changeSample = () => {
 	sampleCounter++;
 
 	if(sampleCounter == 2){
-		$("#sampleWebsite button").html("Another Sample?")
+		$("#sampleWebsite button").html("Any mobile app he owns?")
 	}
 
 	else if(sampleCounter == 3){
-		$("#sampleWebsite button").html("How about games?")
-		sampleWebsite.href = "https://flip-flash.herokuapp.com";
+		$("#sampleWebsite button").html("Blockchain/web3 related works?")
+		sampleWebsite.href = "https://play.google.com/store/apps/details?id=com.trojan.flipflash";
 	}
 
 	else if (sampleCounter == 4){
-		$("#sampleWebsite button").html("Sample of his websites?");
+		$("#sampleWebsite button").html("How about 3D games?");
+		sampleWebsite.href = "https://elven-hunt.netlify.app";
+	}
+
+	else if (sampleCounter == 5){
+		$("#sampleWebsite button").html("Hmm.. 2D games?");
 		sampleWebsite.href = "https://jtrajano33.itch.io/dessert-chaos-v02";
 	}
 
-	else if(sampleCounter > 4){
+	else if (sampleCounter == 6){
+		$("#sampleWebsite button").html("Sample of his websites?");
+		sampleWebsite.href = "https://jtrajano33.github.io/fortuneTeller/";
+	}
+
+	else{
+		sampleCounter = 2;
 		sampleWebsite.href = "https://pokemmerce.herokuapp.com/";
+		$("#sampleWebsite button").html("Any mobile app he owns?");
 	}
 }
