@@ -105,7 +105,7 @@ main .screen{
 		animation: buttonBlinking 0.7s infinite;
 	}
 
-	.creditsText .mb-5{
+	.creditsText .mb-4{
 		letter-spacing: 1px;
 	}
 
